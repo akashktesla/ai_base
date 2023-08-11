@@ -1,0 +1,5 @@
+definitions
+
+* state -> encodes position/state of the problem
+* action -> action changes the state
+* Action(s) -> gives all the possible action that can be performed on that state
