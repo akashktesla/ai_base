@@ -1,5 +1,30 @@
-definitions
 
-* state -> encodes position/state of the problem
-* action -> action changes the state
-* Action(s) -> gives all the possible action that can be performed on that state
+
+==definitions==
+
+* *state* -> encodes position/state of the problem
+* *action* -> action changes the state
+* *Action(s)* -> gives all the possible action that can be performed on that state
+* *transtition model* -> what state results from perorming an action in any state ( what would happen if I do the action)
+- *Result(s,a)* -> returns the final state results from applying the action to the state
+* *state space* -> set of all space reachable from initial state (by action)
+* *goal test* -> determines wheather it's a goal state aka loss function (kinda)
+* *path cost* -> numerical cost for the path to goal state (cost of solving the problem)
+
+node -> data structure that keeps track of 
+    * parent node
+    * action
+    * path cost
+
+Approach
+
+* start with frontier with initial state
+Explore (loop) {
+    * if frontier is empty return no solution
+    * remove a node from the frontier (use stack(depth first)) ( use queue breath first)
+    * if node contains goal state, return solution
+    * add the node to explored nodes(set) 
+    * else expand node, add resulting nodes to the frontier (explore neighboring nodes)
+}
+
+
