@@ -1,3 +1,4 @@
 Everything AI
 
 * [[search]]
+* knowledge

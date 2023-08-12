@@ -1,0 +1,12 @@
+*propositional logic*
+
+Locical connectives
+    * not 
+    * and
+    * or
+    * implication (if)
+    * biconditional (if and only if)
+
+* *Knowledge base -> A set of sentences aka knowledge that ai knows
+Entails: if alpha entails beta then if a is true then b is also true a|=b
+* inference -> process of getting new information to derive from knowledge base

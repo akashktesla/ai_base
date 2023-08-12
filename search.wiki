@@ -10,14 +10,12 @@
 * *state space* -> set of all space reachable from initial state (by action)
 * *goal test* -> determines wheather it's a goal state aka loss function (kinda)
 * *path cost* -> numerical cost for the path to goal state (cost of solving the problem)
-
-node -> data structure that keeps track of 
+* *node* -> data structure that keeps track of 
     * parent node
     * action
     * path cost
 
-Approach
-
+*Approach*
 * start with frontier with initial state
 Explore (loop) {
     * if frontier is empty return no solution
@@ -27,4 +25,26 @@ Explore (loop) {
     * else expand node, add resulting nodes to the frontier (explore neighboring nodes)
 }
 
+*Uninformed search:*
+    * no context specific statergy
+*informed search:*
+    * uses problem specific start
+
+*greedy best-first search:* 
+    * expands the node that's closest to the goal
+    * heuristic function -> returns how close u are to the goal
+        * uses manhattan distance (distance with horizontal and vertical movments)
+   
+*A*:*
+    * considers heuristic function and path cost
+
+*MiniMax:*
+    * s0: initial state
+    * player(s): returns which player to move in state s
+    * actions(s): returns legal moves in state s
+    * result(s,a) returns state afer actiion is taken in the state
+    * terminal(s) : checks if state is a terminal state
+    * utility(s): returns numberical enocding for terminal states (win,lose,draw) (-1,0,1)
+    * min player, max player... minimize for min maximize for max explore all possible actions decide what to pick
+   
 

@@ -1,4 +1,5 @@
 import sys
+from PIL import Image, ImageDraw
 
 class Node():
     def __init__(self, state, parent, action):
@@ -117,29 +118,25 @@ class Maze():
 
 
     def solve(self):
-        """Finds a solution to maze, if one exists."""
-
         # Keep track of number of states explored
         self.num_explored = 0
 
         # Initialize frontier to just the starting position
         start = Node(state=self.start, parent=None, action=None)
-        frontier = StackFrontier()
+        # frontier = StackFrontier() #dfs
+        frontier = QueueFrontier() #bfs
         frontier.add(start)
 
-        # Initialize an empty explored set
         self.explored = set()
 
-        # Keep looping until solution found
         while True:
-
             # If nothing left in frontier, then no path
             if frontier.empty():
                 raise Exception("no solution")
 
             # Choose a node from the frontier
             node = frontier.remove()
-            self.num_explored += 1
+            self.num_explored += 1 # num of states explored
 
             # If node is the goal, then we have a solution
             if node.state == self.goal:
@@ -165,7 +162,6 @@ class Maze():
 
 
     def output_image(self, filename, show_solution=True, show_explored=False):
-        from PIL import Image, ImageDraw
         cell_size = 50
         cell_border = 2
 
