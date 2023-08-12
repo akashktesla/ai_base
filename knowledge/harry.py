@@ -9,6 +9,8 @@ knowledge = And(
     Or(hagrid, dumbledore),
     Not(And(hagrid, dumbledore)),
     dumbledore
+    # hagrid
 )
 
 print(model_check(knowledge, rain))
+# print(knowledge.formula())
