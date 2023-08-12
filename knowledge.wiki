@@ -10,3 +10,12 @@ Locical connectives
 * *Knowledge base -> A set of sentences aka knowledge that ai knows
 Entails: if alpha entails beta then if a is true then b is also true a|=b
 * inference -> process of getting new information to derive from knowledge base
+
+* first order logic relation (namba arn maari tha)
+example
+    belogs_to(bla bla)
+first order na there can be a single variable
+and norder logic -> n variables 
+
+* this is easy... mine does way better ARN - thinking cycle
+* it also has uncertainity ig...(mine)

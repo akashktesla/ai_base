@@ -1,0 +1,4 @@
+UNCERTAINITY
+
+* represent knowledge with probability
+* 0<= p(w) <= 1 (probability ranges between 0 to 1)

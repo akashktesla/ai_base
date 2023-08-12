@@ -1,4 +1,5 @@
 Everything AI
 
 * [[search]]
-* knowledge
+* [[knowledge]]
+* uncertainity
