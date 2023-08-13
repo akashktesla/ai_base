@@ -1,1 +1,81 @@
 SUpervised learning -> given a data set of input output pairs, learn a function to map inputs and outputs
+
+*nearest classification* -> select 1 nearest neighbor and classify it as the input
+*k-nearest classification* -> choose common class out of k nearest data points to that input
+
+*weight vector*: (w0,w1,w2)
+*input vector*: (1, x1, x2) {x1,x2 are variables}
+*hw(x)* => if w.x >= 0 1 ; else 0
+
+//provides a line that separate the space into two classification
+*perceptron learning rule:* 
+    * given data point (x,y) update according to 
+        wi = wi + lr(value - estimate)) * xi
+*disadvantages:* 
+    * it's binary... onnu antha side of the line or intha side of the line
+    * it's hard threshold
+
+*svm classifiers* 
+    *maximum margin separator:* 
+        * boundary that maximized the distance between any of the data points
+        * does by using support vectors
+
+*regression:* 
+    supervised learning task of learning a function mapping an input point to a continuous value
+
+*Loss function:* 
+    * function that expresses how porrly our model performs
+
+1. *0-1 loss function:*
+   * 0 if preddicted else 1
+   * proly used in binary classification
+    
+2. *L1 loss function:*
+    L(expected,predited) = |expected-predicted |
+
+3. L2 loss function: 
+    L(expected,predited) = (expected-predicted)^2
+
+overfitting: 
+    * a model that fits too closesly with training data... so u can't generalize it
+*regularization:* 
+    * penalizing model that are more complex to favor simpler, and more genral model
+    * cost(h) = loss(h) + a* complexity(h) -> to make the svm simple and to avoid over fitting
+        where a is reularization rate
+    * complexity(h) -> sum (weights coefficients) ( of the svm)
+
+holdout cross validation: 
+    * splitting data into a training set and test set...
+    * train with train data... test with test which is totally unrelatted
+
+k-hold croww validation: 
+    * split data into k parts
+    * hold one part for testing and train with others
+    * hold out all and take the average
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

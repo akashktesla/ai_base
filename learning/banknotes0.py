@@ -8,8 +8,8 @@ from sklearn.neighbors import KNeighborsClassifier
 
 # model = Perceptron()
 # model = svm.SVC()
-# model = KNeighborsClassifier(n_neighbors=1)
-model = GaussianNB()
+model = KNeighborsClassifier(n_neighbors=1)
+# model = GaussianNB()
 
 # Read data in from file
 with open("banknotes.csv") as f:
