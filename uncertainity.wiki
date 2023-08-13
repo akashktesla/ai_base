@@ -2,3 +2,38 @@ UNCERTAINITY
 
 * represent knowledge with probability
 * 0<= p(w) <= 1 (probability ranges between 0 to 1)
+* sum of all possible outcomes probabilites = 1 
+
+*unconditional prob:* 
+    * probability without any evidence
+
+*conditional prob:*
+    * p(a|b) prob of a given b is happened 
+    * probability of something given with an evidence
+
+p(a ^ b) = p(a) p(b|a) (vice versa)
+
+*probability distribution*: takes on the value and give it's probablity
+P(x) = <,>
+
+independence: 
+    * one event can be independent of other vaiables
+    * p(a ^ b) = p(a) * p(b) (instead of p(b|a) since it's independent)
+
+*bayes rule*:
+    * p(a|b) = p(a|b)*p(b) / p(a)
+    
+* p(-a) = 1 - p(a) 
+* p(a v b) = p(a) + p(b) - p(a ^ b)
+* p(a) = p(a,b) + p(a,-b)
+
+*sampling:*
+    * sample values according to theri probs and find the final prob
+    * can use monte carlo simulation for that shit
+
+*Markov assumption:*
+    * current state depends on only a finite fixed number of previous states
+
+Markov chain: 
+    * chain of random variabes that follows markov assumption
+    
