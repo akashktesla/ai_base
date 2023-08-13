@@ -1,0 +1,48 @@
+Local search
+    * serach locally until u find a minima / maxima (based on ur problem)
+
+
+*hill climbing*: nearby neighbors and choose which is greater 
+varations: 
+*steepest-acent* -> choose the highest valued neighbor
+*stochastic* -> choose randomly from higher-valued neighbor
+*first-choice* -> chose the first higher-valued neighbor
+*random-restart* -> conduct hill climbing multiple times
+*local beam serach* -> choose the k highest-valued neighbors
+
+*simulated annealing*:
+    * initial: higher temperature more likely to accept neighbors that are worst than current state
+    * later temp decreases: and it's less likely to accept state worse than it is
+    sim_annealing(problem,max):
+        current = initial state of problem
+        for t = 1..max:
+            t = temperature(t)
+            neighbor = random neighbor
+            delE = how much better neighbor is than current 
+            if delE > 0:
+                current = neighbor
+            else:
+                if (prob) e^delE/t set current = neighbor
+                
+Linear programing:  
+    * minimize a cost function c1x1+c2x2+....(linear equation)
+    * minimize cost function
+
+
+*constraint satisfaction problem:* 
+
+unary constraint -> constraint with 1 variable
+binary constraint -> constraint with 2 variable
+node consistency: whel all the values in a variables's domain satisfy the variable's unary constraint
+arc consistency: whel all the values in a variables's domain satisfy the variable's binary constraint
+
+hard constraints -> must follow exactly 1 0
+soft constraints -> can be upto preferences
+
+Algorithms:
+    * backward search -> goes where it failed and reassigns the variable recursion
+    * maintaining arc-consistency -> algorithm for enforcing arch-consistency everytime we make a new assignment
+
+select - unassigned var
+* select minium remaining value heuristic -> select the one with smallest domain
+* degree heruistic: select the variable that has the highest degree

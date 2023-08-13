@@ -3,3 +3,5 @@ Everything AI
 * [[search]]
 * [[knowledge]]
 * [[uncertainity]]
+* [[optimization]]
+* [[learning]]

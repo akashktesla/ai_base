@@ -1,0 +1,1 @@
+SUpervised learning -> given a data set of input output pairs, learn a function to map inputs and outputs
