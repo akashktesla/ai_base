@@ -1,0 +1,75 @@
+NLP
+
+* automatic summarization
+* information extraction
+* machine translation
+* question answering 
+* text classification
+
+lib: nltk (natural language took kit)
+
+*syntax*
+
+formal grammer -> a system of ruels for generating sentences in a language
+
+*n-gram*
+    * a contiguous sequence of n items from a sample of text
+
+*tokenization:* 
+    * the task of splitting a sequence of  characters into pieces (tokens)
+
+* we can build a markov chain for language to generalize 
+
+*Text classifcation:*
+    * sentiment alaysis
+
+*bag of words model:* 
+    model that represents text as an unordered collection of words
+
+Naive bayes classifier: 
+    * p(loved|my,grandson,loved,it)
+    * it'uses baf of words model and bayes rule
+    Laplace smoothing:
+        * add 1 to each value in our distribution... pretending we seen it tho it may not appear
+
+one-hot representation: 
+    akash is god
+    akash [1,0,0]
+    is [0,1,0]
+    god [0,0,1]
+    * if vocab is long it's difficult to represent
+
+distributed representation:     
+    * representation of meaning distributed across multiple values
+    * akash -> [0.234,0.0034,-0.34]
+    * such a way that similar words have similar vector representation
+    * it groups by looking at the context... what are all the word that appear  with the word
+    * and arranges in a way that they are similar
+    word2vec: model for generating word vectors
+    
+RNN: 
+   * encoder network... produces a hidden state and passes it along..
+   * after end token is recieved goes to the decorder network 
+   * decoder network: takes the hidden state from encoder network and decodes it untill it produces a end token
+   * for larger sequence it's difficult to store it in a single state
+
+Attention: 
+    * which is word is important to pay attention to for the given state
+    * generates a attention score for a given state ( how relavent they are to the given sentence)
+    * when trying to decode... by given state attention score is calculated and 
+    * weighted sum is taken on all the hidden values to produce a new value that probably encodes everything properly
+
+* rnn is difficult to parallize since it depeends on previous input
+
+*Transformers:* (gpt):
+    * input word + posistional enoding + self attention -> nn -> encoded representation
+    * input word + posistional enoding + n*(self attention -> nn) -> encoded representation
+    * it also can use multiple self attention layers -> multi head attention
+    * self attention -> each word attends to other words to help capture the context
+    * easy to parallize
+
+    decoder: 
+        previous  output word + posistional enocding -> n*(self attention -> encoded attention -> nn) -> next output word
+
+
+

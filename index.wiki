@@ -5,3 +5,5 @@ Everything AI
 * [[uncertainity]]
 * [[optimization]]
 * [[learning]]
+* [[neural_network]]
+* [[language]]

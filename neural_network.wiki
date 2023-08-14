@@ -8,23 +8,58 @@
     * logistic sigmoid -> g(x) = e^x/(e^x+1)
     * ReLu -> g(x) = max(0,x)
 
-gradient-decent:
+*gradient-decent:*
     * algorithm for minizing the loss function
     * takes gradient of the loss function
     * weights = weights + lr(-grad) //update weights
     * updates after calculating everything
 
-stochastic gradient decent:
+*stochastic gradient decent:*
     * calculate the gradient based on one data point direction that will minimize the loss
     * and updates the weight according to the gradient
     * updates after each data point
 
-mini-batch gradient decent:
+*mini-batch gradient decent:*
     * calculate the gradient based on a mini batch point direction that will minimize the loss
     * updates after each mini batch
 
-perceptron: 
+*perceptron:* 
     * can't handle when the data is not linearly seperable
 
-multilayer neural network:
+*multilayer neural network:*
     * ann with an input layer, output layer and atleast one hidden layer
+
+*Back propagation:*
+    * start with a random choice of weights
+    * repeat: 
+        * for each, starting with output layer and moveing inwards towards earliest hidden layer
+        * propagate error back one layer
+
+*deep neural network:*
+    * nerual network with multiple hidden layers
+
+*over fitting:*
+    dropout:
+        * randomly temporarily removing units from neural network
+
+*computer vision:*
+    image convolution:
+        * applying a filter that adds each pixel value of an image to it's neighbors, weighted according to kernel matrix 
+    pooling: 
+        * reducing the size of an input by sampling from regions in the input
+    max pooling: 
+        * pooling by choosing maximum value of the region ( region is X x Y )
+
+CNN ( convolution neural network)
+    * appliest filter and obtains multiple feature map
+    * pooling -> to reduce the no of input
+    * flattening -> feed to to a ann
+   image -> convolution -> pooling -> flattening -> ffnw 
+    * convolution and pooling can be applied mutiple times
+
+*Feed forward neural network(ffnw):*
+    * nn that has connections in only in one direction    
+
+Recurrent neural network (rnn):
+    * generates output fed back into it's own network
+    * remembers sequences and stuff
