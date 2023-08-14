@@ -33,10 +33,10 @@ SUpervised learning -> given a data set of input output pairs, learn a function 
 2. *L1 loss function:*
     L(expected,predited) = |expected-predicted |
 
-3. L2 loss function: 
+3. *L2 loss function:* 
     L(expected,predited) = (expected-predicted)^2
 
-overfitting: 
+*overfitting:* 
     * a model that fits too closesly with training data... so u can't generalize it
 *regularization:* 
     * penalizing model that are more complex to favor simpler, and more genral model
@@ -44,38 +44,52 @@ overfitting:
         where a is reularization rate
     * complexity(h) -> sum (weights coefficients) ( of the svm)
 
-holdout cross validation: 
+*holdout cross validation:* 
     * splitting data into a training set and test set...
     * train with train data... test with test which is totally unrelatted
 
-k-hold croww validation: 
+*k-hold croww validation:* 
     * split data into k parts
     * hold one part for testing and train with others
     * hold out all and take the average
 
+*Reinforcement learning:* 
+    *  given a set of rewards or punishments, learn what actions to take in future
+    * ppo, policy gradient, q-learning etc...
+    * Agent , environment... 
+    * agent chooses a action -> get's a reward or punishment
+    * it tries to maximize the award
 
+*Markov decision process:*    
+    * model for decision-making representing statest, action and their rewards
 
+*Q learning:*
+    * Q(s,a) -> calculates how much reward/punishment it wud get my taking the action on that state
+    * start with Q(s,a) = 0 for all s,a
+    * when we taken an action and recieve a reward =>
+            -> estimate the values of Q(s,a) based on current reward and expected future rewards
+        q(s,a) <- q(s,a) + a*((reward + b*max Q(s',a')) -q(s,a))
+        a -> how much we value new information
+        b -> how much we value future rewar
+        max Q(s',a') -> maximum of all possible actions I can take next ( future rewards )
 
+*Greedy decision making:* 
+    * when in state s, choose action a with highest q(s,a) 
 
+*epsolon(e)-greedy algo*:
+    * set e equal to how often we want to move randomly (kinda lime simulated annealing ig)
+    * with prob 1- e choose estimate best move
+    * with prob e choose random move
+    * with more training we can decrease e
 
+*function approximation:*
+    * approximating q(s,a), by combining various features than storing s-a pair
 
+*clustering*:
+    * organizing a set of objects into groups in such a way that similar objects tend to be in similar group
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+*k-means clustering:*
+    * assign k-cluster centers
+    * repeatedly assign points to the cluster and change it's ceter point
+    * while predicting which ever is near it belongs to that cluster
 

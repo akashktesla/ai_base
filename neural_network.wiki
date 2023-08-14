@@ -1,0 +1,30 @@
+*Neural Networks*
+
+*Ann:* 
+    model mathematical function from inputs to outputs based on structure of the nn
+    
+*Activation functions:*
+    * step function -> 1 if x>=0, else 0
+    * logistic sigmoid -> g(x) = e^x/(e^x+1)
+    * ReLu -> g(x) = max(0,x)
+
+gradient-decent:
+    * algorithm for minizing the loss function
+    * takes gradient of the loss function
+    * weights = weights + lr(-grad) //update weights
+    * updates after calculating everything
+
+stochastic gradient decent:
+    * calculate the gradient based on one data point direction that will minimize the loss
+    * and updates the weight according to the gradient
+    * updates after each data point
+
+mini-batch gradient decent:
+    * calculate the gradient based on a mini batch point direction that will minimize the loss
+    * updates after each mini batch
+
+perceptron: 
+    * can't handle when the data is not linearly seperable
+
+multilayer neural network:
+    * ann with an input layer, output layer and atleast one hidden layer
